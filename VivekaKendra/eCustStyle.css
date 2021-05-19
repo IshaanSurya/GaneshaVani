@@ -1,0 +1,35 @@
+
+.EgSp {
+  border: 2px solid gray;
+  background-color: rgba(256,256,256);
+}
+
+.vbTransp {
+background-color: transparent;
+
+}
+.vbbg {
+background-color: rgba(46, 97, 132, 0.25);
+}
+
+
+.edhl{
+background-color: rgba(42,256,256,1);//#66ffff;
+}
+
+.hilitePart{
+background-color: rgba(46, 97, 132, 0.25);
+}
+
+
+
+#IdInstOrgName
+{
+	font-family: sans-serif;
+	font-size: "40%";
+}
+
+.dragDupe,.drag
+{
+border: 2px solid #000
+}
