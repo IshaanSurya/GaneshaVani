@@ -1,0 +1,306 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html dir="ltr"><head>
+
+
+
+
+
+
+
+
+
+
+  
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8"><title>MultipleDupeDragPerCell</title>
+  
+
+  
+  
+  <meta name="CREATED" content="0;0">
+
+  
+  <meta name="CHANGEDBY" content="Aroon Surya">
+
+  
+  <script language="javascript" src="../scripts/dragdupeScripts.js"></script>
+  
+  <script language="javascript" src="../scripts/common.js"></script>
+  
+  <script language="javascript" src="oo_prepositionBasic3.js"></script>
+  
+  <style type="text/css">
+.drag{
+position:relative;
+cursor:hand;
+z-index: 100;
+}
+  </style></head><body>
+<br>
+
+<form action="--WEBBOT-SELF--" method="post">
+  <script type="text/javascript">
+dragdupeobject.initialize();
+  </script>
+  <table style="page-break-before: always; width: 1115px; height: 1333px;" border="1" cellpadding="2" cellspacing="2">
+    <tbody>
+      <tr>
+        <td colspan="3" style="background: transparent url(../images/bgd.jpg) repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" height="19" width="100%">
+        <p align="center"><font color="#ffffff"><font face="Arial"><font size="4">Homophones - 4</font></font></font><font color="#ffffff"><font face="Arial"><font size="4"><span style="font-family: Lohit Kannada;"></span><br>
+        </font></font></font></p>
+        </td>
+      </tr>
+      <tr>
+        <td style="background: transparent url(../images/bgd.jpg) repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" height="486" width="3%">
+        <p>&nbsp;</p>
+        </td>
+        <td width="95%">
+        <div style="text-align: center;"> </div>
+        <div style="text-align: center;"><small>Click on the image and
+drag its copy. </small><br>
+        <small>To delete click on the object with ctrl-key pressed.</small></div><dl>
+          <dd>
+            <div style="text-align: center;">
+            </div>
+<table id="MainDragRange" style="width: 997px; height: 885px;" border="1" cellpadding="2" cellspacing="3">
+              <tbody>
+                <tr>
+                  <td style="vertical-align: top; font-family: Helvetica,Arial,sans-serif; text-align: center;">Click &amp; drag these.<br>
+                  </td>
+                  <td style="vertical-align: top; font-family: Helvetica,Arial,sans-serif; text-align: center;">Drag and drop matching homophones.<br>
+                  </td>
+                  <td style="vertical-align: top; font-family: Helvetica,Arial,sans-serif; text-align: center;">Complete the sentences with proper (appropriate) homophones as suggested by the pictures in each row. <span style="background-color: rgb(255, 102, 0);">See example</span>.<br>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="vertical-align: top; font-family: Helvetica,Arial,sans-serif; background-color: rgb(255, 102, 0);">Example:<br>
+                  </td>
+                  <td style="vertical-align: top; font-family: Helvetica,Arial,sans-serif; background-color: rgb(255, 102, 0);"><img style="width: 87px; height: 95px;" alt="" src="../imagesXsrvk/week.jpeg" align="right"><img style="width: 96px; height: 95px;" alt="" src="../imagesXsrvk/weak1.png" align="right"></td>
+                  <td style="vertical-align: top; font-family: Helvetica,Arial,sans-serif; background-color: rgb(255, 102, 0);"><br>
+I am on vacation (leave) next&nbsp;<span style="background-color: white;"> week </span>.<br>
+
+
+                  <br>
+
+
+Doctor, I feel very&nbsp;<span style="background-color: white;"> weak </span>.
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="1" rowspan="9" style="vertical-align: top;"><button class="dragDupe" value="sun" name="sun" type="button"><img style="width: 66px; height: 59px;" alt="" src="../imagesXsrvk/sun.png"></button><br>
+
+
+
+                  <br>
+
+
+
+                  <button class="dragDupe" value="no" name="no" type="button"><img style="width: 66px; height: 59px;" alt="" src="../imagesXsrvk/no.png"></button><br>
+
+
+
+                  <br>
+
+
+
+                  <button class="dragDupe" value="ate" name="ate" type="button"><img style="width: 66px; height: 59px;" alt="" src="../imagesXsrvk/eight.jpeg"></button><br>
+
+
+
+                  <br>
+
+
+
+                  <button class="dragDupe" value="two" name="two" type="button"><img style="width: 66px; height: 59px;" alt="" src="../imagesXsrvk/two.jpeg"></button><br>
+
+
+
+                  <br>
+
+
+
+                  <button class="dragDupe" value="red" name="red" type="button"><img style="width: 66px; height: 59px;" alt="" src="../imagesXsrvk/red.png"></button><br>
+
+
+
+                  <br>
+
+
+
+                  <button class="dragDupe" value="weak" name="weak" type="button"><img style="width: 66px; height: 59px;" alt="" src="../imagesXsrvk/weak1.png"></button><br>
+
+
+
+                  <br>
+
+
+
+                  <button class="dragDupe" value="meat" name="meat" type="button"><img style="width: 66px; height: 59px;" alt="" src="../imagesXsrvk/meat.jpeg"></button><br>
+
+
+
+                  <br>
+
+
+
+                  <button class="dragDupe" value="ear" name="ear" type="button"><img style="width: 66px; height: 59px;" alt="" src="../imagesXsrvk/ear.jpeg"></button><br>
+
+&nbsp; <br>
+
+
+
+
+                  <button class="dragDupe" value="blue" name="blue" type="button"><img style="width: 66px; height: 59px;" alt="" src="../imagesXsrvk/blue.png"></button>&nbsp; </td>
+                  <td style="vertical-align: top; font-family: Helvetica,Arial,sans-serif; background-color: rgb(204, 153, 51);"><img style="width: 132px; height: 95px;" alt="" src="../imagesXsrvk/to.png" align="right"></td>
+                  <td style="vertical-align: top; font-family: Helvetica,Arial,sans-serif; background-color: rgb(204, 153, 51);">We have <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> arms.<br>
+
+
+                  <br>
+
+
+Give this book  <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> your mother.</td>
+                </tr>
+<tr>
+                  
+                  
+                  <td style="width: 281px; background-color: rgb(153, 102, 51); font-family: Helvetica,Arial,sans-serif; height: 108px;"><img style="width: 87px; height: 95px;" alt="" src="../imagesXsrvk/ate.png" align="right"><br>
+<small><font size="5">
+</font></small></td>
+                  <td style="background-color: rgb(153, 102, 51); font-family: Helvetica,Arial,sans-serif; width: 576px; height: 108px;">There are <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> books on the table.<br>
+
+                  <br>
+
+We <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> dosas for breakfast.</td>
+                </tr>
+<tr>
+                  
+                  
+                  <td style="width: 281px; background-color: rgb(204, 153, 51); height: 109px; font-family: Helvetica,Arial,sans-serif;"><img style="width: 77px; height: 95px;" alt="" src="../imagesXsrvk/fatherSon.png" align="right">
+</td>
+                  <td style="background-color: rgb(204, 153, 51); width: 576px; font-family: Helvetica,Arial,sans-serif; height: 109px;">The <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> sets in the west.<br>
+
+
+                  <br>
+
+
+My <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> is in third grade.</td>
+                </tr>
+                <tr>
+                  <td style="width: 281px; background-color: rgb(153, 102, 51); height: 107px; font-family: Helvetica,Arial,sans-serif;"><img style="width: 87px; height: 95px;" alt="" src="../imagesXsrvk/read1.png" align="right">
+</td>
+                  <td style="background-color: rgb(153, 102, 51); width: 576px; font-family: Helvetica,Arial,sans-serif; height: 107px;">I have  <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> this book .<br>
+
+
+                  <br>
+That&nbsp;  <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> shirt is dirty.</td>
+                </tr>
+                <tr>
+                  <td style="width: 281px; background-color: rgb(204, 153, 51); height: 107px; font-family: Helvetica,Arial,sans-serif;"><img style="width: 87px; height: 95px;" alt="" src="../imagesXsrvk/week2.jpeg" align="right">
+</td>
+                  <td style="background-color: rgb(204, 153, 51); width: 576px; font-family: Helvetica,Arial,sans-serif; height: 107px;">I have a test this <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small>.<br>
+
+
+                  <br>
+
+
+He is very <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> in math.</td>
+                </tr>
+                <tr>
+                  <td style="width: 281px; background-color: rgb(153, 102, 51); height: 105px; font-family: Helvetica,Arial,sans-serif;"><img style="width: 87px; height: 95px;" alt="" src="../imagesXsrvk/week1.jpeg" align="right">
+</td>
+                  <td style="background-color: rgb(153, 102, 51); width: 576px; font-family: Helvetica,Arial,sans-serif; height: 105px;">This  <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> I have six subjects.<br>
+
+
+                  <br>
+
+
+I lost my <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> ring.</td>
+                </tr>
+		<tr>
+		
+                  <td style="width: 281px; background-color: rgb(204, 153, 51); height: 106px; font-family: Helvetica,Arial,sans-serif;"><img style="width: 97px; height: 95px;" alt="" src="../imagesXsrvk/blow.png" align="right">
+</td>
+<td style="width: 281px; background-color: rgb(204, 153, 51); height: 106px; font-family: Helvetica,Arial,sans-serif;">The wind <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> the candle out.<br>
+
+                  <br>
+
+Do you have a <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"> </small></font></small>ink pen?<br>
+</td>
+	</tr>
+		<tr>
+		
+                  <td style="width: 281px; background-color: rgb(153, 102, 51); height: 106px; font-family: Helvetica,Arial,sans-serif;"><img style="width: 87px; height: 95px;" alt="" src="../imagesXsrvk/know.png" align="right">
+</td>
+<td style="width: 281px; background-color: rgb(153, 102, 51); height: 106px; font-family: Helvetica,Arial,sans-serif;">There is <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"> </small></font></small><small><font size="5"><small> </small></font></small>water in the tank.<br>
+
+                  <br>
+
+                  <small><font size="5"><small> </small></font></small>I <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"></small></font></small> that I will be late to school today.
+</td>
+	</tr>
+		<tr>
+		
+                  <td style="width: 281px; background-color: rgb(204, 153, 51); height: 108px; font-family: Helvetica,Arial,sans-serif;"><img style="width: 87px; height: 80px;" alt="" src="../imagesXsrvk/meet1.png" align="right">
+</td>
+<td style="width: 281px; background-color: rgb(204, 153, 51); height: 108px; font-family: Helvetica,Arial,sans-serif;">
+We will <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"> </small></font></small>again soon.<br>
+
+                  <br>
+
+                  <small><font size="5"><small><input style="font-size: 14pt;" class="Non-drag" name="T45" size="8"> </small></font></small>should be well cooked.</td>
+	</tr>
+              </tbody>
+            </table>
+          </dd>
+        </dl>
+        <div align="center">
+        <p><font color="#cc3300"><font face="Arial"><font size="5"><b>Total
+questions.</b></font></font></font> <b>= </b><input name="questions" size="5" style="width: 1.17cm; height: 0.61cm;" type="text"><font color="#cc3300"><font face="BRH Kannada"><font size="5"><b><br>
+        </b></font></font></font><font color="#cc3300"><font face="Arial"><font size="5"><b>Number of attempts.</b></font></font></font>&nbsp;
+        <b>=</b> <input name="attempts" size="5" style="width: 1.17cm; height: 0.61cm;" type="text"><font color="#cc3300"><font face="BRH Kannada"><font size="5"><b><br>
+        </b></font></font></font><font color="#cc3300"><font face="Arial"><font size="5"><b>Correct answers.</b></font></font></font>&nbsp;
+        <b>=</b> <input name="percentage" size="5" style="width: 1.17cm; height: 0.61cm;" type="text"></p>
+        </div>
+        <div align="center">
+        <p><br>
+        <font color="#ff0000"><font face="Arial"><font size="5"><u><b>Note</b></u></font></font></font><font color="#ff0000"><font face="BRH Kannada"><font size="5"><u><b>:</b></u></font></font></font><font color="#ff0000"> </font><font face="Arial"><font size="4">This page
+will lock after 3 "</font></font><font color="#ff0000"><font face="Arial"><font size="4">Grade me</font></font></font><font face="Arial"><font size="4">" attempts.</font></font><b><br>
+        </b><input name="GradeMe" value="Grade Me" style="width: 3.28cm; height: 1.11cm; font-family: 'Arial'; font-size: 14pt;" onclick="checkMulValuesByName(this.form)" type="button"></p>
+        </div>
+        <div align="center">
+        <p><input name="Clear" value="Clear all" style="width: 2.78cm; height: 1.11cm; font-family: 'Arial'; font-size: 14pt;" onclick="resetAll(this.form)" type="reset"></p>
+        </div>
+        <p align="center"><font color="#ff0000"><font face="Arial"><font size="5"><u><b>Note</b></u></font></font></font><font color="#ff0000"><font face="BRH Kannada"><font size="5"><u><b>:</b></u></font></font></font><font color="#ff0000"> </font><font face="Arial"><font size="4">Pressing
+"Show Answers" will list answers in the box below.&nbsp;<br>
+It will also lock the page.</font></font></p>
+        <div align="center">
+        <p><input name="ShowAnswers" value="Show Answers" style="width: 4.58cm; height: 1.11cm; font-family: 'Arial'; font-size: 14pt;" onclick="showAnswers(this.form)" type="button"></p>
+        </div>
+        <div align="center">
+        <p><br>
+        <br>
+        <textarea name="solutions" rows="11" cols="62" wrap="SOFT" style="width: 13.63cm; height: 4.47cm;"></textarea>&nbsp;</p>
+        </div>
+        <p align="center"><a href="oo_speech7.html"><br>
+        </a></p>
+        </td>
+        <td style="background: transparent url(../images/bgd.jpg) repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" width="2%">
+        <p>&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3" style="background: transparent url(../images/bgd.jpg) repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" height="19" width="100%">
+        <p>&nbsp;</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</form>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+
+
+
+</body></html>

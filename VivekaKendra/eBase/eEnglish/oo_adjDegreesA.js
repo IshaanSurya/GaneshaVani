@@ -1,0 +1,32 @@
+<!--
+var numQues = 21;
+var numOptions = 04;
+var answers = new Array(numQues);
+var sel = new Array(numQues);
+var attempts =0;
+
+answers[0] = "short";
+answers[1] = "taller";
+answers[2] = "shorter";
+answers[3] = "tallest";
+answers[4] = "shortest";
+answers[5] = "big";
+answers[6] = "smaller";
+answers[7] ="bigger";
+answers[8] = "smallest";
+answers[9] = "biggest"; 
+answers[10] = "light"
+answers[11] = "heavier";
+answers[12] = "lighter";
+answers[13] = "heaviest";
+answers[14] = "lightest";
+answers[15] = "slow";
+answers[16] = "faster";
+answers[17] = "slower";
+answers[18] ="fastest";
+answers[19] = "slowest";
+answers[20] = "high"; 
+answers[21] ="lower";
+answers[22] = "higher";
+answers[23] ="lowest";
+answers[24] = "highest";
