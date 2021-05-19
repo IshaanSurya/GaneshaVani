@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html dir="ltr">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>FloatingButtons</title>
+    <meta name="CREATED" content="0;0">
+    <meta name="CHANGEDBY" content="Aroon Surya">
+    <script language="javascript" src="../scripts/ganParseURL.js"></script>
+    <script language="javascript" src="../scripts/dragdupeScripts.js"></script>
+    <script language="javascript" src="../scripts/randomizer.js"></script>
+    <script language="javascript" src="../scripts/floatObj.js"></script>
+    <script language="javascript" src="Ish_PlaceValJrFl4.js"></script>
+    <style type="text/css">
+.drag{
+position:relative;
+cursor:hand;
+z-index: 100;
+}
+  </style>
+  </head>
+  <body onload="initFields()"> <br>
+    <form action="--WEBBOT-SELF--" method="post">
+      <table style="page-break-before: always; width: 1115px; height: 672px;" cellspacing="2"
+        cellpadding="2" border="1">
+        <tbody>
+          <tr>
+            <td colspan="3" style="background: transparent url(../images/bgd.jpg) repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"
+              width="100%" height="19">
+              <p align="center"><font color="#ffffff"><font face="Arial"><font size="4">Place
+                      Values (Indian System) Jr-4</font></font></font><font color="#ffffff"><font
+                    face="Arial"><font size="4"><br>
+                    </font></font></font></p>
+            </td>
+          </tr>
+          <tr>
+            <td style="background: transparent url(../images/bgd.jpg) repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"
+              width="3%" height="486">
+              <p>&nbsp;</p>
+            </td>
+            <td width="95%">
+              <div style="text-align: center;"> </div>
+              <dl>
+                <dd>
+                  <table style="text-align: left; width: 100%;" cellspacing="2"
+                    cellpadding="2" border="1">
+                    <tbody>
+                      <tr align="center">
+                        <td colspan="3" rowspan="1" style="vertical-align: top; width: 835px; background-color: #66cccc;"><span
+                            style="font-family: Arial;"><img src="../imgKendra/boys1.png"
+                              alt="boys1"><br>
+                            <strong><br>
+                              Which of these numbers&nbsp; may be true for the
+                              statement....<br>
+                              <br>
+                            </strong> <strong>Question</strong>: </span><textarea
+style="font-size: 16px; font-family: Arial;" id="qField" readonly="readonly" cols="60"
+rows="3" name="qField">Click on the
+Start button to begin
+the game.</textarea><span style="font-family: Arial;">&nbsp; </span><input style="font-family: Arial; font-size: 20px; color: black; background-color: rgb(255, 153, 255);"
+value="Start" size="5" onclick="beginFloats(this)" type="button">&nbsp;&nbsp; <span
+                            style="font-family: Arial;"><small>TrueFloats:</small>
+                          </span><input style="font-size: 14pt; text-align: center;"
+                            id="ansField" readonly="readonly" value="0" size="1"
+                            type="text"> </td>
+                      </tr>
+                      <tr align="center">
+                        <td colspan="3" rowspan="1" style="vertical-align: top; width: 835px; background-color: #66cccc;">&nbsp;<span
+                            style="font-family: Arial;">Earned points / Tabled
+                            points : </span><input style="color: white; background-color: rgb(153, 0, 0); font-size: 16pt; font-family: Arial; text-align: center;"
+                            id="scoreKeeper" readonly="readonly" value="0" size="5"
+                            type="text"><span style="font-family: Arial;"> <big><big>/</big></big>&nbsp;
+                            </span><input style="color: rgb(153, 0, 0); background-color: rgb(255, 204, 153); font-size: 16pt; font-family: Arial; text-align: center;"
+                            id="tabledPts" readonly="readonly" value="0" size="5"
+                            type="text"><span style="font-family: Arial;">
+                            &nbsp;&nbsp;</span><span style="font-family: Arial;"></span><span
+                            style="font-family: Arial;"></span><span style="font-family: Arial;">
+                            &nbsp;&nbsp;</span> <span style="font-family: Arial;">Time
+                            : </span><input style="color: black; background-color: white; font-size: 16pt; font-family: Arial; text-align: center; opacity: 0.83;"
+                            id="myTimer" readonly="readonly" value="0" size="5"
+                            type="text"><span id="tmstmp"> tm</span> </td>
+                      </tr>
+                      <tr>
+                        <td style="vertical-align: top; width: 70px; background-color: #66cccc;"><br>
+                        </td>
+                        <td style="vertical-align: top; background-color: #336666; height: 470px; width: 835px;"
+                          id="FlyRange"><br>
+                        </td>
+                        <td style="vertical-align: top; width: 69px; background-color: #66cccc;"><br>
+                        </td>
+                      </tr>
+                      <tr align="center">
+                        <td colspan="3" rowspan="1" style="vertical-align: top; width: 835px; background-color: #66cccc;"><span
+                            style="font-family: Arial;"></span><span style="font-family: Arial;"></span><br>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <br>
+                </dd>
+              </dl>
+            </td>
+            <td style="background: transparent url(../images/bgd.jpg) repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"
+              width="2%">
+              <p>&nbsp;</p>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" style="background: transparent url(../images/bgd.jpg) repeat scroll 0% 50%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;"
+              width="100%" height="19">
+              <p>&nbsp;</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  </body>
+</html>
