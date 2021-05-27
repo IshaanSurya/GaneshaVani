@@ -1,0 +1,1291 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Sri Ramakrishan Vidyakendra</title>
+</head>
+
+<body>
+<script language="javascript">
+
+var numQues = 12;
+var nRows = 12;
+var nCols= 9;
+
+var studValues = new Array(12);
+var answers = new Array(12);
+var placVals = new Array(9);
+
+placVals [0] = 100000000;
+placVals [1] = 10000000;
+placVals [2] = 1000000;
+placVals [3] = 100000;
+placVals [4] = 10000;
+placVals [5] = 1000;
+placVals [6] = 100;
+placVals [7] = 10;
+placVals [8] = 1;
+
+answers[0] = 164987;
+answers[1] = 2007009;
+answers[2] = 6787;
+answers[3] = 45801;
+answers[4] = 230145;
+answers[5] = 52;
+answers[6] = 915068;
+answers[7] = 100035;
+answers[8] = 45223;
+answers[9] = 589043;
+answers[10] = 73276152;
+answers[11] = 241718543;
+
+/*
+studValues[0] = "Those are bananas.";
+studValues[1] = "These are capsicums.";
+studValues[2] = "That is a pepper.";
+studValues[3] = "Those are onions.";
+studValues[4] = "This is a pineapple.";
+studValues[5] = "These are oranges.";
+studValues[6] = "Those are carrots.";
+studValues[7] = "Those are apples.";
+studValues[8] = "These are grapes.";
+studValues[9] = "That is a tomato.";
+studValues[10] = "These are coconuts.";
+studValues[11] = "These are coconuts.";
+*/
+
+function checkValues(form) {
+  var score = 0;
+	for (i=0; i<nRows*nCols; i++) 
+	{
+		var answer = form.elements[i].value;
+		var answer_length = answer.length;
+		var last_char = answer.charAt(answer_length-1);
+		if (last_char == " ") 
+		{
+			form.elements[i].value = 0 ; 
+		}
+	}
+	
+	for (i=0; i<nRows; i++) 
+	{
+		tempVal=0;
+		for (j=0; j<nCols;j++)
+		{
+			tempVal = tempVal + form.elements[i*nCols+j].value*placVals[j];
+		}
+		studValues[i] = tempVal;
+	}
+
+  for (i=0; i<nRows; i++) 
+  {
+	var correct = (studValues[i] == answers[i]);
+
+		if(correct)
+		{
+			score++;
+		}
+		for (j=0; j<nCols;j++)
+		{
+		   	if (correct ) 
+   			{	
+   				form.elements[i*nCols+j].style.backgroundColor=""
+   			}
+   			else
+   			{
+	   			form.elements[i*nCols+j].style.backgroundColor="#C0C0C0";
+	   		}
+	   	}
+  }
+  form.percentage.value = score; //+ "%";
+  form.questions.value = numQues;
+}
+
+function showAnswers(form)
+{
+  checkValues(form);
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }
+  form.GradeMe.disabled = "True";
+  DisableAll(form,"True")
+  form.solutions.value = correctAnswers;
+}
+
+
+function resetAll(form) 
+{
+  form.reset;
+  for (i=0; i<nRows*nCols; i++) {
+       form.elements[i].style.backgroundColor="";
+	}
+}
+
+function DisableAll(form,bVal) 
+{
+  form.reset;
+  for (i=0; i<nRows*nCols; i++) {
+       form.elements[i].disabled = bVal;
+	}
+}
+
+</script>
+
+<form method="POST" action="--WEBBOT-SELF--">
+  <!--webbot bot="SaveResults"
+  U-File="D:\aroon\English\worksheets\web\_private\form_results.txt"
+  S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+  <p align="center">&nbsp;</p>
+  <table border="1" width="800" height="542">
+    <tr>
+      <td width="100%" height="19" colspan="3" background="images/bgd.jpg" align="center">
+        <p align="center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="100%" height="19" background="images/header_bgd.jpg" colspan="3" align="center">
+        <p align="center"><font color="#FFFFFF" size="6">Sri Ramakrishan
+        Vidyakendra</font></td>
+    </tr>
+    <tr>
+      <td width="100%" height="19" background="images/bgd.jpg" colspan="3" align="center">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="3%" height="486" background="images/bgd.jpg" align="center">&nbsp;</td>
+      <td width="95%" height="486" align="center">
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <table border="1" width="381">
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <font size="4" face="BRH Kannada">£ÀªÀÄä
+                                                    gÁdåzÀ°è F ªÀµÀð, <b>
+                                                    MAzÀÄ ®PÀë
+                                                    CgÀªÀvÁß®ÄÌ ¸Á«gÀ
+                                                    MA¨ÉÊ£ÀÆgÀÄ
+                                                    JA§vÉÛÃ¼ÀÄ</b> l£ï PÀÄA§¼À PÁ¬Ä
+                                                    ¨É¼ÉzÉªÀÅ.</font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T1" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T2" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T3" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T4" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T5" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T6" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T7" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T8" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T9" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/pumpkins.jpg" width="297" height="220">
+              </font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <font face="BRH Kannada" size="4">&nbsp;PÉÆqÀV£À°è
+                                                    ¨É¼ÉzÀ
+                                                    QvÀÛ¼ÉUÀ¼À°è, <b> E¥ÀvÀÄÛ
+                                                    ®PÀë
+                                                    K¼ÀÄ¸Á«gÀ MA§vÀÄÛ</b>
+                                                    PÉÃfUÀ¼À£ÀÄß aÃ£Á
+                                                    zÉÃ±ÀPÉÌ gÀ¥sóÀÅÛ
+                                                    ªÀiÁzÀ¯Á¬ÄvÀÄ </font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T11" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T12" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T13" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T14" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T15" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T16" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T17" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T18" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T19" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/oranges.jpg" width="299" height="198">
+              </font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bordercolor="#FFFFCC"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bordercolor="#FFFFCC">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bordercolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bordercolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bordercolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bordercolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bordercolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bordercolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bordercolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC" bordercolor="#FFFFCC">
+                                                    <font face="BRH Kannada" size="4">¥Àæw
+                                                    ªÀµÀð £ÀªÀÄä
+                                                    vÉÆÃlzÀ°è <b> DgÀÄ ¸Á«gÀzÀ
+                                                    K¼À£ÀÆgÀ
+                                                    JA§vÉÛÃ¼ÀÄ</b> PÉÃf
+                                                    zÁæQë
+                                                    ¨É¼ÉAiÀÄÄvÉÛÃªÉ.</font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T20" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T21" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T22" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T23" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T24" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T25" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T26" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T27" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T28" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/grapevine.jpg" width="295" height="228">
+              </font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <font size="4" face="BRH Kannada">PÀ¼ÉzÀ
+                                                    ªÀµÀð CªÉÄÃjPÁ¢AzÀ
+                                                    <b>£À®ªÀvÉÊzÀÄ ¸Á«gÀzÀ
+                                                    JAl£ÀÆgÀÄ MAzÀÄ PÉf</b>
+                                                    ¸ÉÃ§£ÀÄß&nbsp;
+                                                    DªÀÄzÀÄ
+                                                    ªÀiÁrPÉÆ¼Àî¯Á¬ÄvÀÄ.</font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T29" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T30" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T31" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T32" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T33" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T34" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T35" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T36" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T37" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/apples.jpg" width="295" height="221">
+              </font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <font size="4">
+                                                    <font face="BRH Kannada">gÁªÀÄPÀÈµÀÚ
+                                                    «zÁåPÉÃAzÀæzÀ°è ±Á¯ÉAiÀÄ
+                                                    «zÁåyðUÀ¼À ªÀÄzsÁå£ÀzÀ
+                                                    HlPÉÌ PÀ¼ÉzÀ ªÀµÀð
+                                                    <b>
+                                                    JgÀqÀÄ ®PÀë ªÀÄÄªÀvÀÄÛ¸Á«gÀ
+                                                    £ÀÆgÀ£À®ªÀvÉÊzÀÄ</b>
+                                                    UÁæªÀiï
+                                                    D®ÆUÀqÉØUÀ¼À£ÀÄß
+                                                    G¥ÀAiÉÆÃV¸À¯Á¬ÄvÀÄ</font></font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T38" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T39" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T41" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T42" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T43" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T44" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T45" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T46" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T47" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/potatoes.jpg" width="301" height="203">
+              </font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <font face="BRH Kannada" size="4">£ÀªÀÄä
+                                                    ±Á¯ÉAiÀÄ vÉÆÃlzÀ°è
+                                                    <b>
+                                                    LªÀvÉÛgÀqÀÄ </b> «zsÀzÀ
+                                                    vÀgÀPÁj ºÁUÀÄ ¸ÉÆ¥ÀÅöàUÀ¼À£ÀÄß
+                                                    ¨É¼ÉAiÀÄÄwÛzÉÝÃªÉ.</font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T48" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T50" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T51" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T52" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T53" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T54" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T55" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T56" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T57" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/vegs.jpg" width="299" height="234">
+              </font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <font face="BRH Kannada" size="4">F
+                                                    ªÀµÀð £ÀªÀÄä
+                                                    ªÀiÁgÀÄPÀmÉÖUÀ¼Á°è
+                                                    <b>MA§vÀÄÛ ®PÀëzÀ ºÀ¢£ÉÊzÀÄ
+                                                    ¸Á«gÀzÀ CgÀªÀvÉÛAlÄ</b>
+                                                    PÉÃf PÁågÉmï UÀ¼À£ÀÄß
+                                                    ªÀiÁgÁlPÉÌ §gÀÄªÀÅ¢zÉ.</font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T58" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T60" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T61" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T62" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T63" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T64" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T65" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T66" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T67" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/carrots.jpg" width="300" height="201">
+              </font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <font face="BRH Kannada" size="4"><b>MAzÀÄ
+                                                    ®PÀë ªÀÄÄªÀvÉÊzÀÄ</b>
+                                                    l£ï ZÀjæ
+                                                    ºÀtÄÚUÀ¼ÀÄ d¥Á£ï
+                                                    zÉÃ±ÀzÀ¢AzÀ gÀ¥sÁÛUÀÄvÀÛzÉ</font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T68" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T70" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T71" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T72" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T73" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T74" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T75" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T76" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T77" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/cherries.jpg" width="299" height="249"></font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <font face="BRH Kannada" size="4">F
+                                                    ªÀµÀð ªÀiÁgÀÄPÀmÉÖAiÀÄ°è
+                                                    <b>£À®ªÀvÉÊzÀÄ ¸Á«gÀ
+                                                    E£ÀÆßgÀ E¥ÀvÀÆägÀÄ</b>
+                                                    l£À ¸À¥ÉÇÃl ºÀtÚ£ÀÄß
+                                                    ªÀiÁgÀ¯Á¬ÄvÀÄ.</font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T78" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T80" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T81" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T82" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T83" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T84" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T85" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T86" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T87" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/fruitsale.jpg" width="296" height="243"></font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <font size="4">&nbsp; <font face="BRH Kannada"><b>LzÀÄ
+                                                    ®PÀë
+        JA§vÉÆÛA§vÀÄÛ ¸Á«gÀzÀ £À®ªÀvÀÆägÀÄ</b> l£À
+                                                    eÉÆÃ¼ÀªÀ£ÀÄß F ªÀµÀð
+                                                    EAzÀ£À gÀÆ¥ÀPÉÌ ¥ÀjªÀwð¸À®àqÀÄvÀÛzÉ.</font></font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T88" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T90" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T91" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T92" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T93" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T94" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T95" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T96" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T97" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/cornharv.jpg" width="283" height="354"></font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+                                                    <font size="4"><font face="BRH Kannada">¨sÁgÀvÀ
+                                                    <b>K¼ÀÄPÉÆÃn ªÀÄÄªÀvÉÛgÀqÀÄ
+                                                    ®PÀë J¥ÀvÁÛgÀÄ ¸Á«gÀzÀ
+                                                    £ÀÆgÀ LªÀvÉÛgÀqÀÄ
+                                                    PÉfAiÀÄµÀÄÖ</b>
+                                                    ªÀÄuÁ¹£À
+                                                    PÉÃ¬ÄAiÀÄ£ÀÄß </font><font face="BRH Kannada">¥Àæw
+                                                    ªÀµÀð ¥ÀÅrAiÀÄgÀÆ¥ÀzÀ°è
+                                                    G¥ÀAiÉÆÃV¸ÀÄvÉÛÃªÉ</font></font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T98" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T100" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T101" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T102" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T103" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T104" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T105" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T106" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T107" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/pepper.jpg" width="289" height="234"></font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF"><font face="BRH Kannada"><b><font size="4">zÀ±À</font></b><font size="4" face="BRH Vijay"><b><br>
+              PÉÆÃn</b></font></font></td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b>
+                                                    <font size="4" face="BRH Kannada">PÉÆÃn</font>
+                                                    </b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">®PÀë</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">zÀ±À<br>
+                                                    ¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">¸Á«gÀ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">£ÀÆgÀÄ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">ºÀvÀÄÛ</font></b>
+            </td>
+            <td width="50" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <b><font size="4" face="BRH Kannada">©r</font></b>
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#CCFFFF">
+                                                    <font face="BRH Kannada" size="4">«±ÁézÀåAvÀ
+                                                    <b>E¥ÀvÁß®ÄÌ PÉÆÃn
+                                                    ºÀ¢£ÉÃ¼ÀÄ ®PÀë
+                                                    ºÀ¢£ÉAlÄ ¸Á«gÀ L£ÀÆgÀ
+                                                    £À®ªÀvÀÆägÀÄ</b>
+                                                    PÉf ©Ã£ïì
+                                                    §¼À¸À¯ÁUÀÄvÀÛzÉ.</font>
+            </td>
+          </tr>
+          <tr>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T108" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T110" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T111" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T112" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T113" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T114" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T115" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T116" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="50" valign="middle" align="center">
+              <p align="center"><!--webbot bot="Validation"
+              B-Value-Required="TRUE" I-Minimum-Length="1" I-Maximum-Length="1"
+              --><input type="text" name="T117" size="2" style="font-family: Times New Roman; font-size: 14pt; text-align: Center" maxlength="1">
+            </td>
+            <td width="300" valign="middle" align="center" bgcolor="#FFFFCC">
+              <p align="center"><font face="BRH Kannada" size="4"><img border="0" src="images/beans.jpg" width="289" height="194"></font>
+            </td>
+          </tr>
+        </table>
+        <p><b>Total
+                                            questions = </b> <input size="5" name="questions" readonly="True">
+        </p>
+        <p><b>
+                                            &nbsp;Correct answers =</b> <input size="5" name="percentage" readonly="True">
+        <br>
+                                            <b><br>
+                                            </b><input onclick="checkValues(this.form)" value="Grade Me" type="button" name="GradeMe">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input onclick="showAnswers(this.form)" value="Show Answers" type="button" name="ShowAnswers">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input value="Clear" type="reset" onclick="resetAll(this.form)" name="Clear">
+        <br>
+        <br>
+                                            <textarea type="hidden" name="solutions" rows="11" wrap="virtual" cols="62" readonly="True"></textarea>&nbsp;
+        </p>
+        <p>&nbsp;
+      </td>
+      <td width="2%" height="486" background="images/bgd.jpg">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="100%" height="19" colspan="3" background="images/bgd.jpg" align="center">&nbsp;</td>
+    </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+</form>
+
+</body>
+
+</html>
