@@ -5,7 +5,7 @@ var answers = new Array(numQues);
 var sel = new Array(numQues);
 var attempts =0;
 
-answers[0] = "-4a+5a²-12a³";//-4a+5a²-12a³
+answers[0] = "-4a+5a²-2a³;-2a³+5a²-4a";//-4a+5a²-12a³
 answers[1] = "-1a²+9a³;-a²+9a³";
 answers[2] = "0a²+7a³;0+7a³;+7a³;7a³";
 answers[3] = "-5a²-4a³;-4a³-5a²";
