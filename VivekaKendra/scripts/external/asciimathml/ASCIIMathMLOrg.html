@@ -1,0 +1,135 @@
+<html xmlns:mml="http://www.w3.org/1998/Math/MathML">
+<head>
+<title>ASCIIMath Editor</title>
+<script type="text/javascript" src="../ASCIIMathML.js"></script>
+<script type="text/javascript" src="ASCIIMathMLeditor.js"></script>
+<style type="text/css">
+#menu, #title, #subtitle, #author {text-align: center}
+body {font-family: Arial}
+p, table {font-family: Times}
+</style>
+</head>
+<body bgcolor="beige" onload="initEditor()">
+
+<div id="menu"> | 
+<a href="http://www1.chapman.edu/~jipsen/mathml/asciimath.html">Home Page</a> |
+<a href="http://www1.chapman.edu/~jipsen/mathml/asciimathsyntax.html">Syntax</a> |
+<a href="http://www1.chapman.edu/~jipsen/mathml/asciimathdemo.html">Try it</a> |
+<a href="http://www1.chapman.edu/~jipsen/mathml/asciimathcalculator.html">Calculator</a> |
+Editor |
+<a href="http://mathcs.chapman.edu/~jipsen/mathml/asciimathdownload.html">Download</a> |
+<a href="http://math.chapman.edu/cgi-bin/mathxml.pl?ASCIIMath_FAQ">ASCIIMath FAQ</a> |<a href="http://math.chapman.edu/cgi-bin/mathxml.pl?ASCIIMath_Sandbox">Sandbox</a> |
+<a href="http://groups.google.com/group/asciimath">Comments</a> |
+</div>
+
+<h4 id="subtitle">
+ASCIIMathML Editor 2.0 (This page requires Internet Explorer 6+<a 
+href="http://www.dessci.com/en/products/mathplayer">MathPlayer</a> 
+or Mozilla/Firefox/Netscape 7+.)
+</h4>
+
+<p>
+Type (or paste) your text into the textarea. The display on
+the right updates after 20 keystrokes or whenever you click the update
+button. <b>Enclose all formulas with left-quotes or \$-signs (or 
+double-blanks if checkbox below is selected).</b>
+If you know (La)TeX formula syntax, you can use that as well
+(most basic formulas work). To <b>save your work</b>, click the
+"View MathML" button and copy the output to a text editor (e.g. Notepad).
+<br/>
+Select the layout that best fits your screensize: 
+<input type="button" value="800x600" onclick="AMchangeColumns(45)"/>
+<input type="button" value="1024x768" onclick="AMchangeColumns(58)"/>
+<input type="button" value="1400x1050" onclick="AMchangeColumns(81)"/>
+</p>
+
+<table>
+<tr><td><b>Type</b></td><td><b>Display</b>&#x00A0;
+<input type="button" value="Update" onclick="AMdisplay(true)"/>&#x00A0;
+<input type="button" value="View MathML" onclick="AMviewMathML()"/>
+</td></tr>
+<tr><td>
+<form>
+<textarea id="inputText" rows="30" cols="58" onkeyup="AMdisplay(false)">For example `int_-1^1 sqrt(1-x^2)dx = pi/2`,
+
+`((a,b),(c,d))^-1 = 1/(ad-bc)((d,-b),(-c,a))`
+
+and $\sinh x=\frac{e^x-e^{-x}}{2}$.
+
+amath
+Or try ASCIIMath without delimiters: like x^2 or sin x
+
+It can be quite convenient...
+endamath
+
+</textarea>
+</form>
+</td><td valign="top">
+<div id="outputNode"/>
+</td></tr>
+</table>
+
+<b>Note that this is dynamic HTML running locally on your machine!
+If you leave or refresh this page before copying and saving
+your work, it may disappear.</b>
+
+<p>
+(Copy and paste the following lines to see what symbols they produce)<br/>
+<b>You can use the following ASCIIMathML constructs:</b><tt> \`(x+1)/(x-1) x^(i+j) x_(ij) sqrt(x) root(n)(x) stackrel(+)(->) text(any) "any"\`</tt><br/>
+<b>Operation symbols</b> 
+<tt> \`+ - * ** // \\ xx -: @ o+ ox sum prod ^^ ^^^ vv vvv nn nnn uu uuu\`</tt><br/>
+<b>Relation symbols</b>
+<tt> \`= != &lt; &lt;= > >= -&lt; >- in !in sub sup sube supe -= ~= ~~ prop\`</tt><br/>
+<b>Logical symbols</b><tt> \`and or not => if iff AA EE _|_ TT |-- |==\`</tt><br/>
+<b>Miscellaneous symbols</b> 
+<tt> \`int oint del grad +- O/ oo aleph ... cdots \  quad qquad diamond square |__ __| |~ ~| CC NN QQ RR ZZ\`</tt><br/>
+<b>Standard functions</b> 
+<tt> \`sin cos tan csc sec cot sinh cosh tanh log ln det dim lim mod gcd lcm\`</tt><br/>
+<b>Grouping brackets</b><tt> \`( ) [ ] { } (: :) {: :}\` </tt> 
+<b>Arrows</b><tt> \`uarr darr rarr -> larr harr rArr lArr hArr\` </tt><br/>
+<b>Accents</b><tt> \`hatx barx ulx vecx dotx ddotx\` </tt>
+<b>Font commands</b><tt> \`bbA bbbA ccA ttA frA sfA\` </tt>
+<b>Matrices</b><tt> \`[[a,b],[c,d]] ((1,0),(0,1))\` </tt><br/>
+<b>Greek letters</b><tt> \`alpha beta chi delta Delta epsi eta gamma Gamma
+iota kappa lambda Lambda mu nu omega Omega phi Phi pi Pi psi rho sigma Sigma 
+tau theta Theta upsilon xi Xi zeta\`</tt> 
+</p>
+
+<p>
+You are welcome to save this page locally on your computer
+(then it will also work without an active internet connection) or 
+on a webserver.
+</p>
+
+<p>
+The main aims of the ASCIIMathML syntax are: -- 1. close to standard
+mathematical notation -- 2. easy to read -- 3. easy to type
+</p>
+
+<p>
+With this editor, anyone can easily produce XHTML+MathML documents
+that can be viewed on a variety of browsers (even without JavaScript
+support). The original ASCIIMathML version of the page is included as
+a comment at the top of the webpage in case the page requires further
+editing at a later stage. The editor also ensures that users of ASCIIMathML
+are not locked into the specific ASCII (or LaTeX) syntax, but are free to
+convert their files to standard Presentation MathML when this is convenient.
+</p>
+
+<hr/>
+
+<div id="author">
+<a href="http://www.chapman.edu/~jipsen/">Peter Jipsen</a>, 
+<a href="http://www.chapman.edu/">Chapman University</a>, June 2005
+</div>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-2263958-1";
+urchinTracker();
+</script>
+
+</body>
+</html>
+

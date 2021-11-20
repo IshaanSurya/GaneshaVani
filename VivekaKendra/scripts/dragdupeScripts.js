@@ -290,13 +290,19 @@ var dragdupeobject={
 /******************************************************************
 Function to snap/align the dragged objects to the nearest row border. 
 This is done to facilitate easy Data processing on the dragged objects. 
-Remember dragged objects position is a critical aspects to the processing sequence.
+Remember dragged objects position is a critical aspect in the processing sequence.
 ******************************************************************/
 function snapToRow()
 {  
 	numQues=answers.length;
         var dgObjs = document.getElementsByClassName("drag"); 
+        if(dgObjs.length==0)
+        {
+        	return -1;
+        }
 	var pp = dgObjs[0];
+	//climb up till table containing the first element is reached. 
+	// This does NOT work if the drag elements are spread across multiple tables.
 	do
 	{	var np = pp.parentNode;
 		pp = np;
@@ -309,7 +315,8 @@ function snapToRow()
 	{
 		var chDrgs = snpRows[k].getElementsByClassName("drag"); // Get the drags for the row
 		for (j=0; j<chDrgs.length;j++)
-		{	var dObjPos = getElementAbsolutePos(chDrgs[j]); // Compare the current drag position with the row positions
+		{	
+			var dObjPos = getElementAbsolutePos(chDrgs[j]); // Compare the current drag position with the row positions
 			for(i=(snpRows.length-1);i>=0;i--)
 			{	var tdPos = getElementAbsolutePos(snpRows[i]);
 				//alert(dObjPos.y  +"< , >" + tdPos.y + " i = "+ i + " j= " + j+ "OrgTop=" + chDrgs[j].style.top);
@@ -319,7 +326,8 @@ function snapToRow()
 						chDrgs[j].style.position="absolute";
 					else
 						chDrgs[j].style.position="relative";
-	
+					if(chDrgs[j].style.top == "") // drag obj top will be "" if the drag object is untouched (not dragged) which results in non-alignment to the row-top, so set it to 0
+						chDrgs[j].style.top= "0";
 					chDrgs[j].style.top = parseInt(chDrgs[j].style.top) - (dObjPos.y-tdPos.y)*1 + tollerance;
 					tdPos=getElementAbsolutePos(snpRows[i]);
 					dObjPos=getElementAbsolutePos(chDrgs[j]);
@@ -329,6 +337,7 @@ function snapToRow()
 			}
 		}
 	}
+	return 0;
 }
 /*
 function checkMulValuesByName(form) 
@@ -430,11 +439,20 @@ function checkMulValuesByName(form,snap)
 {
 	var dgObjOrder = [];
 	var score = 0;
+	var qIx=0;
+	var hasDrags=true;
 	if(arguments.length == 1)	// Don't snap if there is a second argument. 
 	{
 		//alert(arguments.length);
-		snapToRow();
+		if(snapToRow() !=0)
+		{
+			hasDrags=false;
+			//score = validateAnsByName("Non-drag",score, i);
+			//return -1;
+		}
 	}
+	if(hasDrags)
+	{
 	var tblObj = document.getElementById("MainDragRange");
 	if(tblObj == null)
 		return;
@@ -505,8 +523,8 @@ function checkMulValuesByName(form,snap)
 		orderedAns[orderedAns.length] = ansStr;
 	}
 	
-	var i=0
-	for (var i=0; i<orderedAns.length; i++) 
+	//i=0;
+	for ( var i=0; i<orderedAns.length; i++,qIx++) 
 	{
 		if(orderedAns[i].length ==0)
 		{
@@ -550,14 +568,16 @@ function checkMulValuesByName(form,snap)
 			{
 				if(dgObjOrder[k].ansSeq == i)
 				{
-					dgObjOrder[k].dgObj.style.borderColor = "#FF0000";
+					//dgObjOrder[k].dgObj.style.borderColor = "#FF0000";
+					setErrorStyle(dgObjOrder[k].dgObj);
 				}
 					
 			}
    		}
   	}
-	if(i < numQues)
-		score = validateAnsByName("Non-drag",score, i);
+  	}
+	if(!hasDrags || qIx < numQues)
+		score = validateAnsByName("Non-drag",score)//, i);
 	if(attempts >3)
 	{
 		DisableAll(form,"True")
@@ -574,13 +594,13 @@ function checkMulValuesByName(form,snap)
 }
 
 
-function validateAnsByName(classNm, score, ansIdx)
+function validateAnsByName(classNm, score, ansIdx=0)
 {
 	var nmObjs = null;
 	nmObjs =  document.getElementsByClassName(classNm);
 	if(nmObjs.length == 0)	
 		return score;
-	for (var i=0; i<numQues-ansIdx; i++) 
+	for (var i=0; i<nmObjs.length; i++) 
 	{
 		var answer = nmObjs[i].value;
 		var answer_length = answer.length;
@@ -591,10 +611,10 @@ function validateAnsByName(classNm, score, ansIdx)
 			i=i-1;
 		}
 	}
-  	for (var i=0; i<numQues-ansIdx; i++) 
+  	for (var i=0; i<answersIp.length; i++) 
 	{
 		var idx = -1;
-		var ans = answers[ansIdx+i];
+		var ans = answersIp[i];
 		var found = 0;
 		do
 		{
@@ -619,7 +639,8 @@ function validateAnsByName(classNm, score, ansIdx)
 
 		if (found==0)
 		{
-			nmObjs[i].style.borderColor = "#FF0000";
+			//nmObjs[i].style.borderColor = "#FF0000";
+			setErrorStyle(nmObjs[i]);
 		}
   	}
 	return score;

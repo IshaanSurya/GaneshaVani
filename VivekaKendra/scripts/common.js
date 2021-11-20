@@ -2,6 +2,13 @@ function getQCount()
 {
 	return answers.length;
 }
+
+function setErrorStyle(el)
+{
+	el.style.borderColor = "#FF0000";
+	el.style.borderWidth="thick";
+}
+
 function checkValues(form) 
 {
 	//alert("I'm Ok");
@@ -34,11 +41,12 @@ function checkValues(form)
 					}
 				  	else
 				  	{
-					  																//form.elements[i*4+j].style.backgroundColor=;
-					  																form.elements[i*4+j].style.borderColor= "#FF0000";
+		  //form.elements[i*4+j].style.backgroundColor=;
+		//form.elements[i*4+j].style.borderColor= "#FF0000";
+					setErrorStyle(form.elements[i*4+j]);							
 				  	}
 				}
-	    		}
+	    	}
 	  	}
 		attempts = attempts*1 + 1;
 		//score = Math.round(score/getQCount()*100);
@@ -79,7 +87,8 @@ function checkValuesEd(form)
     		}
     		else
     		{
-	    		form.elements[i].style.borderColor = "#FF0000";
+	    		//form.elements[i].style.borderColor = "#FF0000";
+	    		setErrorStyle(form.elements[i])
     		}
   	}
 
@@ -102,14 +111,26 @@ function checkValuesEd(form)
 }
 
 
-function checkValuesMulWays(form,iC=false,iSp=false) 
+function checkValuesMulWays(formElem,iC=false,iSp=false,iFilter=false) 
 {
 	var score = 0;
 	var userAns=[];
+	var form=[];
 	// Extract user Answers into an array
+	if(iFilter) //If filtering requested
+	{
+		//Filter to retain only flagged elements
+		form=document.getElementsByName(gv_FilterAns);
+	}
+	else
+	{
+		// All form elements needs processing
+		form=formElem.elements; 
+	}
 	for(var i=0;i<getQCount();i++)
 	{
-		userAns[i]=form.elements[i].value;
+		//userAns[i]=form.elements[i].value;
+		userAns[i]=form[i].value;
 	}
 	// If ignore spaces - remove spaces
 	for(var i=0;iSp && i<userAns.length;i++)
@@ -143,7 +164,8 @@ function checkValuesMulWays(form,iC=false,iSp=false)
 		    	if (userAns[i] == theAns) 
 			{
 					score++;
-	     			form.elements[i].style.borderColor="";
+	     			//form.elements[i].style.borderColor="";
+	     			form[i].style.borderColor="";
 	      			found = 1;
 	      			break;
 	    		}
@@ -152,13 +174,14 @@ function checkValuesMulWays(form,iC=false,iSp=false)
 		
   	  	if (found==0)
     		{
-	    		form.elements[i].style.borderColor="#FF0000";
+	    		//form.elements[i].style.borderColor="#FF0000";
+	    		setErrorStyle(form[i]);
    		}
   	}
 
   	//score = Math.round(score/getQCount()*100);
-  	form.percentage.value = score; //+ "%";
-  	form.questions.value = getQCount();
+  	formElem.percentage.value = score; //+ "%";
+  	formElem.questions.value = getQCount();
 
 	if(attempts >3)
 	{
@@ -169,9 +192,9 @@ function checkValuesMulWays(form,iC=false,iSp=false)
 		attempts = attempts*1 + 1;
 	}
 
-	form.attempts.value = attempts;  
-	form.percentage.value = score; //+ "%";
-	form.questions.value = getQCount();
+	formElem.attempts.value = attempts;  
+	formElem.percentage.value = score; //+ "%";
+	formElem.questions.value = getQCount();
 }
 
 	
@@ -282,7 +305,8 @@ function checkPlaceValues(form) {
    			}
    			else
    			{
-	   			form.elements[i*nCols+j].style.borderColor = "#FF0000";
+	   			//form.elements[i*nCols+j].style.borderColor = "#FF0000";
+	   			setErrorStyle(form.elements[i*nCols+j])
 	   		}
 	   	}
   }
@@ -350,7 +374,8 @@ function checkValuesNoSpace(form)
     		}
     		else
     		{
-	    		form.elements[i].style.borderColor = "#FF0000";
+	    		//form.elements[i].style.borderColor = "#FF0000";
+	    		setErrorStyle(form.elements[i])
    		}
   	}
 
@@ -413,8 +438,10 @@ function checkValuesOnOperation(form)
     		}
     		else
     		{
-	    		form.elements[i].style.borderColor = "#FF0000";
-	    		form.elements[i-1].style.borderColor = "#FF0000";
+    			setErrorStyle(form.elements[i]);
+    			setErrorStyle(form.elements[i-1]);
+	    		//form.elements[i].style.borderColor = "#FF0000";
+	    		//form.elements[i-1].style.borderColor = "#FF0000";
 		}
   	}
 
@@ -535,7 +562,8 @@ function checkValuesMulSel(form)
 			}
 			else
 			{
-				form.elements[i].style.borderColor = "#FF0000";
+				//form.elements[i].style.borderColor = "#FF0000";
+				setErrorStyle(form.elements[i])
 			}
 		}
 		attempts = attempts*1 + 1;
@@ -617,7 +645,8 @@ function checkMulSel(form)
 	   }
 	  else
 	  {
-		  form.elements[i].style.borderColor = "#FF0000";
+		  //form.elements[i].style.borderColor = "#FF0000";
+		  setErrorStyle(form.elements[i])
   	  }
   }
 		attempts = attempts*1 + 1
@@ -721,20 +750,7 @@ function enableKagButtons(enb,frm)
 	frm.k15.disabled=enb;
 }                                                                                
 
-// Raising to Power
-var power = new Array(12);
-power[0] = 176 //0
-power[1] = 185	//1
-power[2] = 178	//2
-power[3] = 179	//3
-power[4] = 8308	//4
-power[5] =8309	//5
-power[6] = 8310	//6
-power[7] = 8311	//7
-power[8] = 8312	//8
-power[9] = 8313	//9
-power[10] = 8315	//-
-power[11] = 8314	//+
+
 /*
 function toPower(e,ed)
 {
@@ -780,9 +796,32 @@ function toPower(e,ed)
 	return pwr; //String.fromCharCode(power[Number(keychar)]);
 }
 */
+
+// Raising to Power
+var power = new Array(12);
+power[0] = 176 //0
+power[1] = 185	//1
+power[2] = 178	//2
+power[3] = 179	//3
+power[4] = 8308	//4
+power[5] =8309	//5
+power[6] = 8310	//6
+power[7] = 8311	//7
+power[8] = 8312	//8
+power[9] = 8313	//9
+
+var spChar=[];
+spChar["-"] = 8315 //"-"
+spChar["+"] = 8314 //"+"
+spChar["s"] = 8730 //"√"
+spChar["c"] = 8731 //"∛"
+spChar["q"] = 8732 //"∜"
+spChar["a"] = 8736 //"∠"
+spChar["o"] = 8486 //"Ω"
+spChar["f"] = 8734 //"∞"
 function toPower (zEvent,ed) {
     var keyStr = ["Control", "Shift", "Alt", "Meta"].includes(zEvent.key) ? "" : zEvent.key + " ";
-    var pwrStr='1234567890-+';
+    var pwrStr='1234567890-+scqaof';
    /* var reportStr   =
         "The " +
         ( zEvent.ctrlKey  ? "Control " : "" ) +
@@ -795,7 +834,9 @@ function toPower (zEvent,ed) {
 	*/
     //--- Was a Ctrl-Alt-E combo pressed?
     if (zEvent.ctrlKey  &&  zEvent.altKey  &&  pwrStr.includes(zEvent.key,0)) 	{  // case sensitive
-        	var suPwr=String.fromCharCode(power[Number(zEvent.key)]);
+    var exChar = (isNaN(zEvent.key)) ? spChar[zEvent.key] : power[Number(zEvent.key)];
+    alert(exChar);
+        	var suPwr= String.fromCharCode(exChar);//power[Number(zEvent.key)]);
         	ed.value=ed.value+ suPwr;//'<sup>'+zEvent.key+'</sup>';    		
         	zEvent.stopPropagation ();
     		zEvent.preventDefault ()

@@ -4,4 +4,8 @@ function loadPreferences()
 	{
 		IdInstOrgName.innerHTML=g_InstOrgName;
 	}
+	if( !(typeof g_postLoadInit === "undefined") && g_postLoadInit!="")
+	{
+		g_postLoadInit();
+	}
 }
