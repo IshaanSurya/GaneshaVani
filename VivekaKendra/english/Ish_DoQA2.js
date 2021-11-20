@@ -8,7 +8,8 @@ var attempts =0;
 var nRows = 10;
 var nCols= 4;
 
-var i_x=0
+var i_x=0;
+answers[i_x++] = "taught";
 answers[i_x++] = "caught";
 answers[i_x++] = "thought";
 answers[i_x++] = "brought";
@@ -16,7 +17,8 @@ answers[i_x++] = "bought";
 answers[i_x++] = "fought";
 answers[i_x++] = "sought";
 
-
+answers[i_x++] = "Do you teach?";
+answers[i_x++] = "Yes, I teach.";
 answers[i_x++] = "Do you catch?";
 answers[i_x++] = "Yes, I catch.";
 answers[i_x++] = "Do you think?";
